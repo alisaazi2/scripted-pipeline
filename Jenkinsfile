@@ -30,7 +30,7 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
 
             withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'REGISTRY_PASSWORD', usernameVariable: 'REGISTRY_USERNAME')]) {
                 stage("Build"){
-                    sh 'docker build -t $REGISTRY_USERNAME/flaskex:$BRANCH_NAME.'
+                    sh 'docker build -t $REGISTRY_USERNAME/flaskex:$BRANCH_NAME  .'
                 }
 
                 stage("Test"){
