@@ -46,4 +46,5 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
                string(name: 'image', value: "$REGISTRY_USERNAME/flaskex"),
                string(name: 'tag', value: "$BRANCH_NAME") ]
             }
+        }
 }
