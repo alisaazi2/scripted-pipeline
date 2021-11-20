@@ -47,4 +47,5 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
                string(name: 'tag', value: "$BRANCH_NAME")]
             }
     }
-}    
+} 
+}
