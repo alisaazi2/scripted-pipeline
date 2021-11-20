@@ -42,9 +42,7 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
                         
             }
             stage("deploy helm"){
-            build job: 'helm', parameters: [
-               string(name: 'image', value: '$REGISTRY_USERNAME/flaskex'),
-               string(name: 'tag', value: '$BRANCH_NAME')]
+            build job: 'helm', parameters:([string(defaultValue: '$REGISTRY_USERNAME/flaskex', name: 'image'), string(defaultValue: '$BRANCH_NAME', name: 'tag')])])
             }
     }
 } 
