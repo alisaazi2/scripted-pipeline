@@ -39,7 +39,7 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
                         docker push $REGISTRY_USERNAME/flaskex:$BRANCH_NAME
                     '''
                 }
-            }            
+                        
         }
         stage("deploy helm"){
         build job: 'helm', parameters: [
