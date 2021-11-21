@@ -39,7 +39,7 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
                         docker push $REGISTRY_USERNAME/flaskex:$BRANCH_NAME
                     '''
                 }
-                tage("deploy helm"){
+                stage("deploy helm"){
               build job: 'helm', parameters: [string(name: 'image', value: "${params.REGISTRY_USERNAME}/flaskex"), string(name: 'tag', value: "${params.BRANCH_NAME}")]
             }
                         
