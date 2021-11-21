@@ -39,8 +39,8 @@ podTemplate(label: 'docker', name: 'docker', namespace: 'tools', yaml: podtempla
                         docker push $REGISTRY_USERNAME/flaskex:$BRANCH_NAME
                     '''
                 }
-              image='$REGISTRY_USERNAME'
-              tag='$BRANCH_NAME'
+              image="${REGISTRY_USERNAME}"
+              tag="${BRANCH_NAME}"
                         
             }
           
